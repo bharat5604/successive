@@ -1,0 +1,120 @@
+@import '_responsive';
+
+.donut-chart {
+  position: relative;
+	width: 200px;
+  height: 200px;
+  margin: 4.4rem auto;
+  @include dekstop{
+    margin: 6rem auto;
+  }
+  border-radius: 100%;
+  .precentage{
+    position: absolute;
+    right: 0px;
+    background: #fff;
+    padding: 20px 22px;
+    z-index: 99;
+    // transform: rotate(-30deg);
+    p{
+      color: #000;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  
+ }
+p.center {
+  background: #fff;
+  position: absolute;
+  text-align: center;
+font-size: 28px;
+  top:0;left:0;bottom:0;right:0;
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 35px;
+  padding: 15% 0 0;
+}
+	
+	
+.portion-block {
+    border-radius: 50%;
+    clip: rect(0px, 200px, 200px, 100px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+.circle {
+    border-radius: 50%;
+    clip: rect(0px, 100px, 200px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+  }
+	
+	
+#part1 {
+    transform: rotate(0deg);
+  }
+
+	#part1 .circle {
+		background-color: #33e4f1;
+		/*transform: rotate(76deg);*/
+		animation: first 1s 1 forwards;
+	  }
+	
+	
+#part2 {
+    transform: rotate(100deg);
+  }
+#part2 .circle {
+    background-color: #ff6464;
+    animation: second 1s 1 forwards 1s;
+  }
+#part3 {
+    transform: rotate(290deg);
+}
+
+	#part3 .circle {
+		background-color: #33e4f1;
+		animation: third 0.5s 1 forwards 2s;
+  }
+  #part4 {
+    transform: rotate(130deg);
+  }
+  #part4 .circle {
+		background-color: #ff6464;
+		animation: fourth 0.5s 1 forwards 2s;
+	}
+	#part5 {
+    transform: rotate(460deg);
+  }
+  #part5 .circle {
+		background-color: #6b75ff;
+		animation: fourth 0.5s 1 forwards 2s;
+	}
+	
+/* Animation */
+@keyframes first {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(100deg);}
+}
+	
+@keyframes second {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(150deg);}
+}
+	
+@keyframes third {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(111deg);}
+}
+@keyframes fourth {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(211deg);}
+}
